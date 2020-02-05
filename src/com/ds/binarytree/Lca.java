@@ -1,7 +1,7 @@
 package com.ds.binarytree;
 
 /**
- *  Program to find the lowest common ancestor of two nodes in binary search tree
+ *  Program to find the lowest common ancestor of two nodes in binary search tree , doing random changes
  */
 class Node{
     int data;
