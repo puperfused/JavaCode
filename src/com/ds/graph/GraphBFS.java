@@ -45,6 +45,7 @@ class GraphNew {
         }*/
     }
 }
+
 public class GraphBFS {
     public static void main(String args[]) {
         GraphNew g = new GraphNew(4);
