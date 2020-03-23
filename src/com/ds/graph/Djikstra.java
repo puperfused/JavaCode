@@ -33,7 +33,7 @@ class GraphShortestPath{
         this.V = V;
         dist = new int[V];
         for(int i=0; i<V; i++) {
-            adj[i] = new LinkedList<>();
+            adj[i] = new ArrayList<Node>();
             dist[i] = Integer.MAX_VALUE;
         }
         dist[0]=0;
@@ -76,7 +76,9 @@ public class Djikstra {
     public static void main(String args[]) {
         Scanner scan = new Scanner(System.in);
         int edge = scan.nextInt();
-        GraphShortestPath graph = new GraphShortestPath(edge);
+        int numNode = scan.nextInt();
+        //System.out.println(edge);
+        GraphShortestPath graph = new GraphShortestPath(numNode);
         int u, v, w;
         for(int i=0; i<edge; i++) {
             u = scan.nextInt();
