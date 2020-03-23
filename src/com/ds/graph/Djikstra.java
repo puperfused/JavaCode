@@ -33,7 +33,7 @@ class GraphShortestPath{
         this.V = V;
         dist = new int[V];
         for(int i=0; i<V; i++) {
-            adj[i] = new ArrayList<Node>();
+            adj[i] = new LinkedList<>();
             dist[i] = Integer.MAX_VALUE;
         }
         dist[0]=0;
