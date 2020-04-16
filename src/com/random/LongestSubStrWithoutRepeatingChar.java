@@ -6,6 +6,7 @@ public class LongestSubStrWithoutRepeatingChar {
 
     public static int solution(String s) {
         int hash[] = new int[26];
+        
        // int len = Integer.parseInt(s.charA);
         return 1;
     }
