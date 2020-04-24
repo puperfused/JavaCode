@@ -14,19 +14,14 @@ class TreeNode {
 class Solution3 {
     public boolean hasPathSum(TreeNode root, int sum) {
 
-        if(root.val > sum) {
+        if(root == null) {
+            if(sum == 0) {
+                return true;
+            }
             return false;
         }
 
-        if(root == null && sum == 0) {
-            return true;
-        }
-
-        if(root.left != null && hasPathSum(root.left, sum - root.val)) {
-            return true;
-        }
-
-        if(root.right != null && hasPathSum(root.right, sum - root.val)) {
+        if(hasPathSum(root.left, sum - root.val) || hasPathSum(root.right, sum - root.val)) {
             return true;
         }
 
@@ -38,11 +33,11 @@ public class PathSum {
     public static void main(String args[]) {
         Solution3 solution3 = new Solution3();
         int sum = 20;
-        TreeNode root = new TreeNode(5);
-        root.left = new TreeNode(4);
-        root.right = new TreeNode(8);
-        root.left.left = new TreeNode(11);
-        boolean ans = solution3.hasPathSum(root, sum);
+        TreeNode root = new TreeNode(1);
+        root.left = new TreeNode(2);
+        //root.right = new TreeNode(8);
+        //root.left.left = new TreeNode(11);
+        boolean ans = solution3.hasPathSum(root, 1);
         System.out.println(ans);
     }
 }
