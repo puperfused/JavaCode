@@ -150,6 +150,8 @@ class Deque {
         deque.printDequeFromFront();
         deque.removeLast();
         deque.printDequeFromFront();
+        int size = deque.size();
+        System.out.println("Current size = " + size);
     }
 }
 
